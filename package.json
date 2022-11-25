@@ -1,0 +1,21 @@
+{
+  "name": "caribooni-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.16.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "graphql-upload": "^11.0.0",
+    "mongoose": "^5.9.28"
+  },
+  "devDependencies": {}
+}
