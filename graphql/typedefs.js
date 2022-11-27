@@ -5,29 +5,29 @@ module.exports = gql`
 
 	# ENUMS
 
-	enum CategoryEnum {
+	enum ProductTypeEnum {
 		CAR_SEATS
 		STEERING_COVERS
 	}
 
-	type CarAccessory {
+	type Product {
 		_id: ID!
 		name: String
-		category: CategoryEnum
+		product_type: ProductTypeEnum
 		price: String
 	}
 
-	input AddCarAccessoryInput {
+	input AddProductInput {
 		name: String!
 		price: String!
-		category: CategoryEnum!
+		product_type: ProductTypeEnum!
 	}
 
 	type Query {
-		getCarAccessories: [CarAccessory]
+		getProducts: [Product]
 	}
 
 	type Mutation {
-		addCarAccessory(input: AddCarAccessoryInput): CarAccessory
+		addProduct(input: AddProductInput): Product
 	}
 `;

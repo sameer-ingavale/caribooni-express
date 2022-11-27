@@ -1,9 +1,9 @@
 const { Schema, model } = require('mongoose');
 
-const CarAccessorySchema = new Schema(
+const ProductSchema = new Schema(
 	{
 		name: String,
-		category: String,
+		product_type: String,
 		price: String,
 	},
 	{
@@ -11,4 +11,4 @@ const CarAccessorySchema = new Schema(
 	}
 );
 
-module.exports = model('CarAccessory', CarAccessorySchema);
+module.exports = model('Product', ProductSchema);

@@ -1,28 +1,28 @@
-const CarAccessory = require('../../models/CarAccessory');
+const Product = require('../../models/Product');
 
 module.exports = {
 	Query: {
-		getCarAccessories: async (_, args, context) => {
-			const carAccessories = await CarAccessory.find();
+		getProducts: async (_, args, context) => {
+			const products = await Product.find();
 
-			return carAccessories;
+			return products;
 		},
 	},
 	Mutation: {
-		addCarAccessory: async (_, args, context) => {
-			const { name, price, category } = args.input;
+		addProduct: async (_, args, context) => {
+			const { name, price, product_type } = args.input;
 
-			const carAccessory = {
+			const product = {
 				name,
 				price,
-				category,
+				product_type,
 			};
 
-			const newCarAccessory = new CarAccessory(carAccessory);
+			const newProduct = new Product(product);
 
-			await newCarAccessory.save();
+			await newProduct.save();
 
-			return newCarAccessory;
+			return newProduct;
 		},
 	},
 };
